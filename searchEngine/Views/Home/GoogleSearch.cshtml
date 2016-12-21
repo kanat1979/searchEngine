@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "GoogleSearch";
+}
+
+<form action="/Home/GoogleSearch" method="post">
+    <h1>Google</h1>
+    <input type="text" class="form-control input-xs" name="query" />
+    <input type="submit" class="btn btn-primary btn-large btn_search" value="Поиск" />
+</form>
+
+
+
+@foreach (var item in ViewBag.Message.Items)
+{
+    <a href="@item.Link">@item.Title</a> <br />
+        @item.Link <br /> <br />
+}
